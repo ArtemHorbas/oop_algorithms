@@ -1,20 +1,23 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace AlghorithmLib
 {
     abstract public class Algorithm
     {
-        private long? time = null;
+        private double time;
         private Sequence sequence;
 
         protected Algorithm(Sequence sequence) 
         {
+            time = 0;
             this.sequence = sequence;
         }
 
         public Sequence Data
         {
             get { return sequence; }
+            set { sequence = value; }
         }
 
         public int Count
@@ -25,11 +28,11 @@ namespace AlghorithmLib
             }
         }
 
-        public long? Time
+        public double Time
         {
             get
             {
-                if(time == null) 
+                if(time == 0) 
                 {
                     time = CalculateTime();
                 }
@@ -37,12 +40,12 @@ namespace AlghorithmLib
             }
         }
 
-        private long CalculateTime()
+        private double CalculateTime()
         {
             Stopwatch watch = Stopwatch.StartNew();
             Sort();
             watch.Stop();
-            return watch.ElapsedMilliseconds;
+            return watch.Elapsed.TotalMilliseconds;
         }
 
         abstract public void Sort();
