@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace AlghorithmLib
+namespace AlgorithmLib
 {
     public abstract class Sequence
     {

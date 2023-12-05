@@ -1,4 +1,4 @@
-﻿namespace AlghorithmLib
+﻿namespace AlgorithmLib
 {
     public class AscendingSequence : Sequence
     {

@@ -1,6 +1,4 @@
-﻿using AlghorithmLib;
-
-namespace AlgorithmsLib
+﻿namespace AlgorithmLib
 {
     public class InsertionSort : Algorithm
     {

@@ -41,10 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="algorithm\Algorithm.cs" />
+    <Compile Include="algorithm\abstract\Algorithm.cs" />
     <Compile Include="algorithm\BubbleSort.cs" />
     <Compile Include="algorithm\InsertionSort.cs" />
     <Compile Include="algorithm\MergeSort.cs" />
+    <Compile Include="algorithm\abstract\RecursiveAlghoritm.cs" />
     <Compile Include="algorithm\SelectionSort.cs" />
     <Compile Include="algorithm\QuickSort.cs" />
     <Compile Include="sequence\AscendingSequence.cs" />

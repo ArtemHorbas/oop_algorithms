@@ -1,7 +1,5 @@
-﻿using AlghorithmLib;
-using AlgorithmsLib;
-using AlgorithmsLib.algorithm;
-using System;
+﻿using System;
+using AlgorithmLib;
 
 namespace AlgorithmsConsole
 {
@@ -9,16 +7,7 @@ namespace AlgorithmsConsole
     {
         static void Main()
         {
-            Algorithm alg = new BubbleSort(new DescendingSequence(20));
-            alg.Sort();
-            Console.WriteLine(alg.Data);
-
-
-            alg = new SelectionSort(new DescendingSequence(20));
-            alg.Sort();
-            Console.WriteLine(alg.Data);
-
-            alg = new QuickSort(new DescendingSequence(20));
+            Algorithm alg = new MergeSort(new DescendingSequence(10000));
             alg.Sort();
             Console.WriteLine(alg.Data);
         }

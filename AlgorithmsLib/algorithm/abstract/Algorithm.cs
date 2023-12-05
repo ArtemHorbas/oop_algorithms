@@ -1,9 +1,8 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-namespace AlghorithmLib
+namespace AlgorithmLib
 {
-    abstract public class Algorithm
+    public abstract class Algorithm
     {
         private double time;
         private Sequence sequence;
@@ -48,6 +47,6 @@ namespace AlghorithmLib
             return watch.Elapsed.TotalMilliseconds;
         }
 
-        abstract public void Sort();
+        public abstract void Sort();
     }
 }

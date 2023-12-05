@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AlghorithmLib
+namespace AlgorithmLib
 {
     public class RandomSequence : Sequence
     {
@@ -11,7 +11,7 @@ namespace AlghorithmLib
             Random rand = new Random();
             for(int i = 0; i < Count; i++) 
             {
-                this[i] = rand.Next(100);
+                this[i] = rand.Next(100000);
             }
         }
     }

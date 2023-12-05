@@ -1,60 +1,57 @@
-﻿using AlghorithmLib;
+﻿using System;
 using System.Collections.Generic;
 
-namespace AlgorithmsLib
+namespace AlgorithmLib
 {
-    public class QuickSort : Algorithm
+    public class QuickSort : RecursiveAlghoritm
     {
         public QuickSort(Sequence sequence) : base(sequence) { }
 
-        public override void Sort()
+        protected override void RecursiveImplementation(IList<int> sequence)
         {
-            List<int> list = new List<int>();
-            for (int i = 0; i < Count; i++)
-            {
-                list.Add(Data[i]);
-            }
-             
-            List<int> sorted = CalculateQuickSort(list);
-
-            for (int i = 0; i < Count; i++) 
-            {
-                Data[i] = sorted[i];
-            }
+            RecursiveImplementation(sequence, 0, sequence.Count - 1);
         }
 
-        private List<int> CalculateQuickSort(List<int> sequence) 
+        private void RecursiveImplementation(IList<int> sequence, int lowIndex, int highIndex)
         {
-            if (sequence.Count <= 1)
+            if(lowIndex >= highIndex)
             {
-                return sequence;
+                return;
             }
 
-            int pivotIndex = sequence.Count / 2;
-            List<int> less = new List<int>();
-            List<int> greater = new List<int>();
+            int pivotIndex = new Random().Next(highIndex - lowIndex) + lowIndex;
+            int pivot = sequence[pivotIndex];
+            Swap(sequence, pivotIndex, highIndex);
 
-            for (int i = 0; i < sequence.Count; i++)
+            int leftPointer = lowIndex;
+            int rightPointer = highIndex;
+
+            while (leftPointer < rightPointer)
             {
-                if (sequence[i] == sequence[pivotIndex])
+                while (sequence[leftPointer] <= pivot && leftPointer < rightPointer)
                 {
-                    continue;
+                    leftPointer++;
                 }
-                else if (sequence[i] < sequence[pivotIndex])
+
+                while (sequence[rightPointer] >= pivot && leftPointer < rightPointer)
                 {
-                    less.Add(sequence[i]);
+                    rightPointer--;
                 }
-                else
-                {
-                    greater.Add(sequence[i]);
-                }
+
+                Swap(sequence, leftPointer, rightPointer);
             }
 
-            List<int> res = new List<int>();
-            res.AddRange(CalculateQuickSort(less));
-            res.Add(sequence[pivotIndex]);
-            res.AddRange(CalculateQuickSort(greater));
-            return res;
+            Swap(sequence, leftPointer, highIndex);
+
+            RecursiveImplementation(sequence, lowIndex, leftPointer - 1);
+            RecursiveImplementation(sequence, leftPointer + 1, highIndex);
+        }
+
+        private void Swap(IList<int> sequnce, int index1, int index2)
+        {
+            int tmp = sequnce[index1];
+            sequnce[index1] = sequnce[index2];
+            sequnce[index2] = tmp;
         }
     }
 }

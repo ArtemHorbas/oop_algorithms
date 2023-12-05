@@ -1,6 +1,4 @@
-﻿using AlghorithmLib;
-
-namespace AlgorithmsLib.algorithm
+﻿namespace AlgorithmLib
 {
     public class SelectionSort : Algorithm
     {

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AlghorithmLib
+﻿namespace AlgorithmLib
 {
     public class BubbleSort : Algorithm
     { 
