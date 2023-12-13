@@ -1,0 +1,76 @@
+﻿<Window x:Class="AlgorithmsWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AlgorithmsWpf"
+        xmlns:wf="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        mc:Ignorable="d"
+     Title="Algorithms Analizer" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="75*" />
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30*" />
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <Border BorderBrush="Black" BorderThickness="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <RadioButton Name="MaxButton" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                 Content="Maximization" Click="RadioButton_Click" />
+                    <RadioButton Name="MinButton" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                 Grid.Row="1" Content="Minimization" Click="RadioButton_Click" />
+                    <RadioButton Name="RandButton" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                 Grid.Row="2" Content="Random" IsChecked="True" Click="RadioButton_Click" />
+                </Grid>
+            </Border>
+            <Border Grid.Row="1" BorderBrush="Black" BorderThickness="1">
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <ToggleButton Name="BubbleButton" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                  Content="Bubble" Checked="ToggleButton_Checked" 
+                                  Unchecked="ToggleButton_Unchecked"  />
+                    <ToggleButton Name="InsertionButton" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" 
+                                  Content="Insertion" Checked="ToggleButton_Checked" 
+                                  Unchecked="ToggleButton_Unchecked" />
+                    <ToggleButton Name="SelectionButton" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" 
+                                  Content="Selection" Checked="ToggleButton_Checked" 
+                                  Unchecked="ToggleButton_Unchecked" />
+                    <ToggleButton Name="QuickButton" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" 
+                                  Content="Quick" Checked="ToggleButton_Checked" 
+                                  Unchecked="ToggleButton_Unchecked" />
+                    <ToggleButton Name="MergeButton" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4" 
+                                  Content="Merge" IsChecked="True" Checked="ToggleButton_Checked" 
+                                  Unchecked="ToggleButton_Unchecked" />
+                </Grid>
+            </Border>
+            <Border Grid.Row="2" BorderBrush="Black" BorderThickness="1">
+                <Button Name="DrawButton" Grid.Row="3" Content="Draw" Width="80" Height="25" Click="DrawButton_Click" />
+            </Border>
+        </Grid>
+        <Grid Grid.Column="1">
+            <WindowsFormsHost>
+                <wf:Chart x:Name="chart">
+                    <wf:Chart.ChartAreas>
+                        <wf:ChartArea />
+                    </wf:Chart.ChartAreas>
+                </wf:Chart>
+            </WindowsFormsHost>
+        </Grid>
+    </Grid>
+</Window>

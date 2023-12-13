@@ -31,10 +31,7 @@ namespace AlgorithmLib
         {
             get
             {
-                if(time == 0) 
-                {
-                    time = CalculateTime();
-                }
+                time = CalculateTime();
                 return time;
             }
         }
