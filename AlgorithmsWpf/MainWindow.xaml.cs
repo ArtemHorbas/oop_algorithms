@@ -80,7 +80,7 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                         new BubbleSort[] {
                             new BubbleSort(new AscendingSequence(1000)),
-                            new BubbleSort(new AscendingSequence(1000)),
+                            new BubbleSort(new AscendingSequence(10000)),
                         }
                     ));
                 }
@@ -89,7 +89,7 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new BubbleSort[] {
                             new BubbleSort(new DescendingSequence(1000)),
-                            new BubbleSort(new DescendingSequence(1000)),
+                            new BubbleSort(new DescendingSequence(10000)),
                        }
                    ));
                 }
@@ -98,7 +98,7 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new BubbleSort[] {
                             new BubbleSort(new RandomSequence(1000)),
-                            new BubbleSort(new RandomSequence(1000)),
+                            new BubbleSort(new RandomSequence(10000)),
                        }
                    ));
                 }
@@ -110,7 +110,7 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                         new InsertionSort[] {
                             new InsertionSort(new AscendingSequence(1000)),
-                            new InsertionSort(new AscendingSequence(1000)),
+                            new InsertionSort(new AscendingSequence(10000)),
                         }
                     ));
                 }
@@ -119,7 +119,7 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new InsertionSort[] {
                             new InsertionSort(new DescendingSequence(1000)),
-                            new InsertionSort(new DescendingSequence(1000)),
+                            new InsertionSort(new DescendingSequence(10000)),
                        }
                    ));
                 }
@@ -128,7 +128,7 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new InsertionSort[] {
                             new InsertionSort(new RandomSequence(1000)),
-                            new InsertionSort(new RandomSequence(1000)),
+                            new InsertionSort(new RandomSequence(10000)),
                        }
                    ));
                 }
@@ -140,7 +140,7 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                         new SelectionSort[] {
                             new SelectionSort(new AscendingSequence(1000)),
-                            new SelectionSort(new AscendingSequence(1000)),
+                            new SelectionSort(new AscendingSequence(10000)),
                         }
                     ));
                 }
@@ -149,7 +149,7 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new SelectionSort[] {
                             new SelectionSort(new DescendingSequence(1000)),
-                            new SelectionSort(new DescendingSequence(1000)),
+                            new SelectionSort(new DescendingSequence(10000)),
                        }
                    ));
                 }
@@ -158,7 +158,7 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new SelectionSort[] {
                             new SelectionSort(new RandomSequence(1000)),
-                            new SelectionSort(new RandomSequence(1000)),
+                            new SelectionSort(new RandomSequence(10000)),
                        }
                    ));
                 }
@@ -170,7 +170,8 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                         new QuickSort[] {
                             new QuickSort(new AscendingSequence(1000)),
-                            new QuickSort(new AscendingSequence(1000)),
+                            new QuickSort(new AscendingSequence(10000)),
+                            new QuickSort(new AscendingSequence(100000))
                         }
                     ));
                 }
@@ -179,7 +180,8 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new QuickSort[] {
                             new QuickSort(new DescendingSequence(1000)),
-                            new QuickSort(new DescendingSequence(1000)),
+                            new QuickSort(new DescendingSequence(10000)),
+                            new QuickSort(new DescendingSequence(100000))
                        }
                    ));
                 }
@@ -188,7 +190,8 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new QuickSort[] {
                             new QuickSort(new RandomSequence(1000)),
-                            new QuickSort(new RandomSequence(1000)),
+                            new QuickSort(new RandomSequence(10000)),
+                            new QuickSort(new RandomSequence(100000))
                        }
                    ));
                 }
@@ -200,7 +203,8 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                         new MergeSort[] {
                             new MergeSort(new AscendingSequence(1000)),
-                            new MergeSort(new AscendingSequence(1000)),
+                            new MergeSort(new AscendingSequence(10000)),
+                            new MergeSort(new AscendingSequence(100000))
                         }
                     ));
                 }
@@ -209,7 +213,8 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new MergeSort[] {
                             new MergeSort(new DescendingSequence(1000)),
-                            new MergeSort(new DescendingSequence(1000)),
+                            new MergeSort(new DescendingSequence(10000)),
+                            new MergeSort(new DescendingSequence(100000))
                        }
                    ));
                 }
@@ -218,7 +223,8 @@ namespace AlgorithmsWpf
                     algorithms.Add(new List<Algorithm>(
                        new MergeSort[] {
                             new MergeSort(new RandomSequence(1000)),
-                            new MergeSort(new RandomSequence(1000)),
+                            new MergeSort(new RandomSequence(10000)),
+                            new MergeSort(new RandomSequence(100000))
                        }
                    ));
                 }
